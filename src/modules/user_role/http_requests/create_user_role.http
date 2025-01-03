@@ -1,0 +1,11 @@
+### Create a user role
+POST http://localhost:80/school/user-role/
+Content-Type: application/json
+
+{
+  "name": "Estudiante",
+  "roleBindings": {
+    "ENROLL_SUBJECT": true
+  },
+  "order": 3
+}

@@ -1,0 +1,13 @@
+model Location {
+  id               String       @id @default(uuid())
+  municipality_id  String
+  municipality     Municipality @relation(fields: [municipality_id], references: [id])
+  country_state_id String
+  country_state    CountryState @relation(fields: [country_state_id], references: [id])
+  region_id        String
+  region           Region       @relation(fields: [region_id], references: [id])
+  school_id        String       @unique
+  school           School       @relation(fields: [school_id], references: [id])
+  created_at       DateTime     @default(now())
+  updated_at       DateTime     @updatedAt
+}

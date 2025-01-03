@@ -1,0 +1,10 @@
+model Teacher {
+  id         String      @id @default(uuid())
+  user_id    String
+  user       User        @relation(fields: [user_id], references: [id])
+  school_id  String
+  school     School      @relation(fields: [school_id], references: [id])
+  classroom  Classroom[]
+  profile_id String?
+  profile    Profile?    @relation(fields: [profile_id], references: [id])
+}

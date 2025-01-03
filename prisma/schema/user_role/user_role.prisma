@@ -1,0 +1,9 @@
+model UserRole {
+  id            String @id @default(uuid())
+  name          String
+  role_bindings Json
+  users         User[]
+  school_id     String
+  school        School @relation(fields: [school_id], references: [id])
+  order         Int
+}

@@ -1,0 +1,8 @@
+### Update a school
+PATCH http://localhost:80/school/b0d2e5f4-f8d4-4d7c-b8a9-d0e0f0a3d1b2
+Content-Type: application/json
+
+{
+  "name": "test2",
+  "type": "UNIVERSITY"
+}

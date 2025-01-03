@@ -1,0 +1,8 @@
+model Media {
+  id          String       @id @default(uuid())
+  file_path   String
+  created_at  DateTime     @default(now())
+  updated_at  DateTime     @updatedAt
+  evaluations Evaluation[]
+  profiles    Profile[]
+}

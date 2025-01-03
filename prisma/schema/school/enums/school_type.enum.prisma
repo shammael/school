@@ -1,0 +1,5 @@
+enum SchoolType {
+  UNIVERSITY
+  HIGH_SCHOOL
+  ELEMENTARY
+}

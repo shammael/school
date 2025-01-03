@@ -1,0 +1,13 @@
+model Classroom {
+  id          String          @id @default(uuid())
+  grade       Int
+  name        String
+  school_id   String
+  school      School          @relation(fields: [school_id], references: [id])
+  status      ClassroomStatus
+  teachers    Teacher[]
+  students    Student[]
+  year        Int
+  subjects    Subject[]
+  evaluations Evaluation[]
+}

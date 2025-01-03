@@ -1,0 +1,4 @@
+enum ClassroomStatus {
+  ACTIVE
+  INACTIVE
+}

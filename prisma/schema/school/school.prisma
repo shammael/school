@@ -1,0 +1,15 @@
+model School {
+  id          String       @id @default(uuid())
+  name        String
+  type        SchoolType
+  created_at  DateTime     @default(now())
+  updated_at  DateTime     @updatedAt
+  teachers    Teacher[]
+  classrooms  Classroom[]
+  students    Student[]
+  programs    Program[]
+  departments Department[]
+  location    Location?
+  status      SchoolStatus
+  user_roles  UserRole[]
+}
