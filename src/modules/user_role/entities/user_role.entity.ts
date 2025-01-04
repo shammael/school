@@ -12,7 +12,7 @@ import { RoleBindingAction } from '../types/role_binding.type';
 export class UserRoleEntity {
   name: string;
   id: UUID;
-  roleBindings: RoleBindingAction;
+  actions: RoleBindingAction;
   schoolID: UUID;
   school: SchoolEntity;
   order: number;

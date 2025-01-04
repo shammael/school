@@ -1,12 +1,11 @@
 model Evaluation {
-  id                  String              @id @default(uuid())
+  id                  String           @id @default(uuid())
   classroom_id        String
-  classroom           Classroom           @relation(fields: [classroom_id], references: [id])
+  classroom           Classroom        @relation(fields: [classroom_id], references: [id])
   subject_id          String
-  subject             Subject             @relation(fields: [subject_id], references: [id])
-  images              Media[]
+  subject             Subject          @relation(fields: [subject_id], references: [id])
   max_note            Float
-  student_evaluations StudentEvaluation[]
+  student_evaluations UserEvaluation[]
   program_id          String
-  program             Program             @relation(fields: [program_id], references: [id])
+  program             Program          @relation(fields: [program_id], references: [id])
 }

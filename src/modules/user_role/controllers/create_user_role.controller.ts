@@ -35,7 +35,8 @@ export class CreateUserRoleController {
       userRoleDB = await this.createUserRoleService.execute({
         data: {
           name: body.name,
-          roleBindings: body.roleBindings,
+
+          actions: body.actions,
           schoolID,
           order: body.order,
         },

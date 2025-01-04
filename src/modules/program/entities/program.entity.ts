@@ -1,23 +1,14 @@
-// id          String        @id @default(uuid())
-//   school_id   String
-//   school      School        @relation(fields: [school_id], references: [id])
-//   status      ProgramStatus
-//   students    Student[]
-//   evaluations Evaluation[]
-//   created_at  DateTime      @default(now())
-//   updated_at  DateTime      @updatedAt
-
 import { UUID } from 'src/brands';
 import { ProgramStatus } from '../enums';
+import { EvaluationEntity } from 'src/modules/evaluation/entities/evaluation.entity';
 
 //   name        String
 export class ProgramEntity {
   id: UUID;
   schoolID: UUID;
   status: ProgramStatus;
-  students: string[];
-  evaluations: string[];
-  created_at: Date;
-  updated_at: Date;
+  evaluations: EvaluationEntity[];
+  createdAt: Date;
+  updatedAt: Date;
   name: string;
 }

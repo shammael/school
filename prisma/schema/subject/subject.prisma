@@ -3,4 +3,7 @@ model Subject {
   name        String
   classrooms  Classroom[]
   evaluations Evaluation[]
+  school_id   String
+  school      School       @relation(fields: [school_id], references: [id])
+  programs    Program[]
 }

@@ -1,9 +1,9 @@
 model Profile {
-  id               String    @id @default(uuid())
+  id               String          @id @default(uuid())
   image_id         String?
-  image            Media?    @relation(fields: [image_id], references: [id])
+  image            Media?          @relation(fields: [image_id], references: [id])
   password         String
   default_password Boolean
-  students         Student[]
-  teachers         Teacher[]
+  user_id          String          @unique
+  user             UserRoleBinding @relation(fields: [user_id], references: [id])
 }

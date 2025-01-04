@@ -4,8 +4,8 @@ model User {
   lastname      String
   email         String            @unique
   pid           Pid?
-  teachers      Teacher[]
-  students      Student[]
-  role          UserRole[]
+  roles         UserRole[]
   role_bindings UserRoleBinding[]
+  evaluations   UserEvaluation[]
+  status        UserStatus
 }

@@ -5,8 +5,6 @@ model Classroom {
   school_id   String
   school      School          @relation(fields: [school_id], references: [id])
   status      ClassroomStatus
-  teachers    Teacher[]
-  students    Student[]
   year        Int
   subjects    Subject[]
   evaluations Evaluation[]

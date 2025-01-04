@@ -1,8 +1,9 @@
-model StudentEvaluation {
+model UserEvaluation {
   id            String     @id @default(uuid())
   evaluation_id String
   evaluation    Evaluation @relation(fields: [evaluation_id], references: [id])
-  student_id    String
-  student       Student    @relation(fields: [student_id], references: [id])
   note          Float
+  images        Media[]
+  user_id       String
+  user          User       @relation(fields: [user_id], references: [id])
 }

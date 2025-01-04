@@ -5,7 +5,7 @@ Content-Type: application/json
 {
   "name": "UNEFA",
   "type": "UNIVERSITY",
-  "municipalityID": "6b10fc2f-5f2e-4698-a022-51e006312798"
+  "municipalityID": "1ed11879-bd04-4233-ad4a-b6143d8a959b"
 }
 
 ### Get school

@@ -3,9 +3,9 @@ model Program {
   school_id   String
   school      School        @relation(fields: [school_id], references: [id])
   status      ProgramStatus
-  students    Student[]
   evaluations Evaluation[]
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
   name        String
+  subjects    Subject[]
 }

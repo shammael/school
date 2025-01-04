@@ -8,6 +8,7 @@ import { SeedModule } from './modules/seed/seed.module';
 import { APP_FILTER } from '@nestjs/core';
 import { RestExceptionsFilter } from './exceptions/rest.exception';
 import { UserRoleModule } from './modules/user_role/user_role.module';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { UserRoleModule } from './modules/user_role/user_role.module';
     SchoolModule,
     SeedModule,
     UserRoleModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [

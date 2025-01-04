@@ -12,7 +12,7 @@ export class CreateUserRoleService {
       await this.prismaService.userRole.create({
         data: {
           name: data.name,
-          role_bindings: data.roleBindings,
+          actions: data.actions,
           school_id: data.schoolID,
           order: data.order,
         },

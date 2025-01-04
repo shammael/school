@@ -6,13 +6,13 @@ import { RoleBindingAction } from '../types/role_binding.type';
 
 type Request = StrictPick<
   UserRoleEntity,
-  'name' | 'schoolID' | 'roleBindings' | 'order'
+  'name' | 'schoolID' | 'actions' | 'order'
 >;
 
 export class CreateUserRoleDataRequest implements Request {
   name: string;
   schoolID: UUID;
-  roleBindings: RoleBindingAction;
+  actions: RoleBindingAction;
   order: number;
 }
 

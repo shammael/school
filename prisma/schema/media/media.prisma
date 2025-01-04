@@ -1,8 +1,9 @@
 model Media {
-  id          String       @id @default(uuid())
-  file_path   String
-  created_at  DateTime     @default(now())
-  updated_at  DateTime     @updatedAt
-  evaluations Evaluation[]
-  profiles    Profile[]
+  id               String           @id @default(uuid())
+  file_path        String
+  created_at       DateTime         @default(now())
+  updated_at       DateTime         @updatedAt
+  profiles         Profile[]
+  pids             Pid[]
+  user_evaluations UserEvaluation[]
 }
