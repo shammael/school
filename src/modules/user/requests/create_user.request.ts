@@ -1,7 +1,6 @@
 import { StrictOmit } from 'utils';
 import { UserEntity } from '../entities';
 import { Email } from 'src/brands';
-import { PidEntity } from 'src/modules/pid/entities/pid.entity';
 import { Prisma } from '@prisma/client';
 import { CreatePidDataRequest } from 'src/modules/pid/requests';
 

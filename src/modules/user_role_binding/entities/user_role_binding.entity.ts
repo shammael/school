@@ -11,6 +11,5 @@ export class UserRoleBindingEntity {
   role?: UserRoleEntity;
   createdAt: Date;
   updatedAt: Date;
-  password: string;
   profile?: ProfileEntity;
 }

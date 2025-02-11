@@ -1,0 +1,8 @@
+export enum GossipModule {
+  USER = 'USER',
+  CLASSROOM = 'CLASSROOM',
+  SUBJECT = 'SUBJECT',
+  PROGRAM = 'PROGRAM',
+  EVALUATION = 'EVALUATION',
+  AUTH = 'AUTH',
+}

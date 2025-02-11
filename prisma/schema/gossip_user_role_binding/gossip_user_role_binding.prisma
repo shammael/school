@@ -1,0 +1,7 @@
+model GossipUserRoleBinding {
+  id                   String          @id @default(uuid())
+  user_role_binding_id String
+  user_role_binding    UserRoleBinding @relation(fields: [user_role_binding_id], references: [id])
+  role_id              String
+  role                 UserRole        @relation(fields: [role_id], references: [id])
+}

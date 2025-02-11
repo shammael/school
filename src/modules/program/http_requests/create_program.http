@@ -1,0 +1,10 @@
+### Create a school program
+POST http://localhost:80/school/program
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJmNmVkYTU2My00OTg5LTRhMGUtYTA2Mi0yYzBjNDhlNjBmZTMiLCJ1c2VyUm9sZUJpbmRpbmdJRCI6ImJmMTVjZDNmLWUzZjktNDIxOS1iNDk3LTM4MDI0MzJkNzlhMSIsImlhdCI6MTczOTMxNDE2MywiZXhwIjoxNzM5NDAwNTYzfQ.GE3nySCvCgKw865Fz5NqE18OQpEttY5BJ_Z4fYU1AfQ
+
+{
+  "name": "Ingenieria en Sistemas",
+  "schoolID": "9d915379-dc68-4c06-bac6-c5c6e1d3283c",
+  "status": "ACTIVE"
+}

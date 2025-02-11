@@ -1,0 +1,11 @@
+model Gossip {
+  id          String       @id @default(uuid())
+  activity_id String
+  module      GossipModule
+  event       GossipEvent
+  new_data    Json?
+  old_data    Json?
+  created_at  DateTime     @default(now())
+  updated_at  DateTime     @updatedAt
+  gossip_user GossipUser?
+}

@@ -6,6 +6,8 @@ import {
 } from '../services';
 import { CreateUserDto } from '../dtos';
 import { UserEntity } from '../entities';
+import { CreateGossipService } from 'src/modules/gossip/services';
+import { GossipEvent, GossipModule } from 'src/modules/gossip/enums';
 
 @Controller('user')
 export class CreateUserController {
@@ -13,30 +15,31 @@ export class CreateUserController {
     private readonly createUserService: CreateUserService,
     private readonly getUserService: GetUserService,
     private readonly deleteUserService: DeleteUserService,
+    private readonly createGossipService: CreateGossipService,
   ) {}
 
   @Post()
   async create(@Body() body: CreateUserDto) {
     let user: UserEntity;
     try {
-      user = await this.getUserService.execute({
+      let userDB = await this.getUserService.execute({
         where: {
           email: body.email,
         },
       });
-      if (user) {
+      if (userDB) {
         throw new BadRequestException({
           message: 'Este email ya está registrado',
         });
       }
-      user = await this.getUserService.execute({
+      userDB = await this.getUserService.execute({
         where: {
           pid: {
             number: body.pid.number,
           },
         },
       });
-      if (user) {
+      if (userDB) {
         throw new BadRequestException({
           message: 'Este número de cédula ya está registrado',
         });
@@ -49,6 +52,26 @@ export class CreateUserController {
           pid: {
             number: body.pid.number,
           },
+        },
+        include: {
+          pid: true,
+        },
+      });
+
+      await this.createGossipService.execute<UserEntity>({
+        data: {
+          activityID: user.id,
+          module: GossipModule.USER,
+          event: GossipEvent.CREATE,
+          gossipUser: {
+            email: body.email,
+            firstname: body.firstname,
+            lastname: body.lastname,
+            userID: user.id,
+            pidID: user.pid.id,
+            pidNumber: user.pid.number,
+          },
+          newData: user,
         },
       });
 

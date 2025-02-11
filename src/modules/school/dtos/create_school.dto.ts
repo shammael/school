@@ -11,4 +11,10 @@ export class CreateSchoolDto {
     message: 'No es un id válido',
   })
   municipalityID: UUID;
+  @IsString()
+  short?: string;
+  @IsUUID(4, {
+    message: 'No es un id válido',
+  })
+  from?: UUID;
 }

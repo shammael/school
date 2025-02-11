@@ -1,0 +1,8 @@
+### Login
+POST http://localhost/school/login/admin
+Content-Type: application/json
+
+{
+  "pidNumber": "V-12345569",
+  "password": "test1234$"
+}

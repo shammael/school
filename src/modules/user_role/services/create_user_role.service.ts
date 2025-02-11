@@ -15,6 +15,7 @@ export class CreateUserRoleService {
           actions: data.actions,
           school_id: data.schoolID,
           order: data.order,
+          status: 'ACTIVE',
         },
         include,
       }),

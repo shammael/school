@@ -1,12 +1,14 @@
 model UserRole {
-  id            String            @id @default(uuid())
-  name          String
-  actions       Json
-  users         User[]
-  school_id     String
-  school        School            @relation(fields: [school_id], references: [id])
-  order         Int
-  created_at    DateTime          @default(now())
-  updated_at    DateTime          @updatedAt
-  role_bindings UserRoleBinding[]
+  id                 String                  @id @default(uuid())
+  name               String
+  actions            Json
+  users              User[]
+  school_id          String?
+  school             School?                 @relation(fields: [school_id], references: [id])
+  order              Int
+  created_at         DateTime                @default(now())
+  updated_at         DateTime                @updatedAt
+  role_bindings      UserRoleBinding[]
+  status             UserStatus              @default(ACTIVE)
+  gossips_user_roles GossipUserRoleBinding[]
 }

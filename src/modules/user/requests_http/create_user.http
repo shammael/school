@@ -3,10 +3,10 @@ POST http://localhost/school/user/
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
-  "firstname": "Shammael",
+  "email": "test6@test.com",
+  "firstname": "Shammaeli",
   "lastname": "Bien-Aisé",
   "pid": {
-    "number": "V-12345678"
+    "number": "V-12345569"
   }
 }

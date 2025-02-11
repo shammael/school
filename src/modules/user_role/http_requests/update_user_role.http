@@ -1,0 +1,31 @@
+### Create a user role
+PATCH http://localhost:80/school/user-role/7bb96a56-b6dc-45b3-8def-bcce0a1fbe57
+Content-Type: application/json
+
+{
+  "actions": {
+    # "CREATE_SCHOOL": true,
+    # "CREATE_USER_ROLE" : true,
+    "USER": {
+      "CREATE": true,
+      "UPDATE": true,
+      "GET": true,
+      # "DELETE": true,
+      "GET_ALL": true
+    },
+    "USER_ROLE": {
+      "CREATE": true,
+      "UPDATE": true,
+      # "DELETE": true,
+      "GET": true,
+      "GET_ALL": true
+    },
+    "SCHOOL": {
+      "CREATE": true,
+      "UPDATE": true,
+      # "DELETE": true,
+      "GET": true,
+      "GET_ALL": true
+    }
+  }
+}

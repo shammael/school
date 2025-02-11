@@ -13,4 +13,6 @@ model School {
   from_branches School[]     @relation("branches")
   to_branches   School[]     @relation("branches")
   subjects      Subject[]
+  code          String
+  short         String
 }

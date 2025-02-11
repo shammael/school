@@ -10,4 +10,6 @@ export class SchoolEntity {
   updatedAt: Date;
   location?: LocationEntity;
   status: SchoolStatus;
+  short: string;
+  code: string;
 }

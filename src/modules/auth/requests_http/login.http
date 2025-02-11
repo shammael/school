@@ -1,0 +1,10 @@
+### Login
+POST http://localhost/school/login
+Content-Type: application/json
+
+{
+  # "userRoleBindingID": "884a7eff-f72e-4079-9ad6-129bd72d4b08",
+  "pidNumber": "V-12345569",
+  "password": "test1234$",
+  "isAdmin": true
+}

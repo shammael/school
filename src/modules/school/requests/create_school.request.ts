@@ -5,7 +5,7 @@ import { StrictPick } from 'utils';
 import { SchoolType } from '../enums';
 import { UUID } from 'src/brands';
 
-type Request = StrictPick<SchoolEntity, 'name' | 'type'> & {
+type Request = StrictPick<SchoolEntity, 'name' | 'type' | 'short' | 'code'> & {
   municipalityID: UUID;
   countryStateID: UUID;
   regionID: UUID;
@@ -17,6 +17,8 @@ export class CreateSchoolDataRequest implements Request {
   countryStateID: UUID;
   regionID: UUID;
   type: SchoolType;
+  code: string;
+  short: string;
 }
 
 export class CreateSchoolRequest {

@@ -15,4 +15,7 @@ export class UpdateSchoolDto implements Dto {
   @IsEnum(SchoolType)
   @IsOptional()
   type?: SchoolType;
+  @IsString()
+  @IsOptional()
+  short?: string;
 }

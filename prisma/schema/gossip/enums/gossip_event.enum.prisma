@@ -1,0 +1,8 @@
+enum GossipEvent {
+  CREATE
+  UPDATE
+  LOGIN
+  LOGOUT
+  RESET_PASSWORD
+  CHANGE_PASSWORD
+}

@@ -9,6 +9,7 @@ import {
   UpdateSchoolService,
 } from './services';
 import { GetSchoolController } from './controllers/get_school.controller';
+import { CountSchoolService } from './services/count_school.service';
 
 @Module({
   controllers: [
@@ -22,6 +23,7 @@ import { GetSchoolController } from './controllers/get_school.controller';
     UpdateSchoolService,
     DeleteSchoolService,
     GetSchoolService,
+    CountSchoolService,
   ],
 })
 export class SchoolModule {}

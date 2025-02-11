@@ -1,3 +1,6 @@
+import { Module } from 'src/commons/enums/module.enum';
 import { BindingActions } from 'src/configs/binding_actions.config';
 
-export type RoleBindingAction = Record<BindingActions, boolean>;
+export type RoleBindingAction = {
+  [k in Module]: Record<BindingActions, boolean>;
+};

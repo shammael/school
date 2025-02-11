@@ -1,0 +1,9 @@
+### Create a user role binding
+POST http://localhost/school/user-role-binding/
+Content-Type: application/json
+
+{
+  "roleID": "7bb96a56-b6dc-45b3-8def-bcce0a1fbe57",
+  "userID": "f6eda563-4989-4a0e-a062-2c0c48e60fe3",
+  "password": "test1234$"
+}

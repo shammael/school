@@ -1,0 +1,4 @@
+enum UserRoleStatus {
+  ACTIVE
+  INACTIVE
+}

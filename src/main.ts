@@ -19,13 +19,11 @@ async function bootstrap() {
             error.constraints[Object.keys(error.constraints)[0]],
           value: error.value && error.value,
         }));
-        console.log({ result });
         return new BadRequestException({
           errors: result,
           message: 'Error de validaciones',
         });
       },
-      
     }),
   );
   const configService = app.get(ConfigService<ENV_TYPE>);

@@ -16,7 +16,6 @@ export const prismaUserRoleBindingEntityAdapter = (
     return {
       createdAt: document.created_at,
       id: uuidAdapter(document.id),
-      password: document.password,
       profile: document.profile
         ? prismaProfileEntityAdapter(document.profile)
         : undefined,

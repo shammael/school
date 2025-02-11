@@ -18,13 +18,12 @@ export class CreateUserRoleController {
 
   @Post()
   async create(@Body() body: CreateUserRoleDto) {
-    const schoolID = '2c46da33-4987-4631-b55c-daf80f182ca1' as UUID;
-    let userRoleDB: UserRoleEntity;
+    let createdUserRole: UserRoleEntity;
     try {
-      userRoleDB = await this.getUserRoleService.execute({
+      const userRoleDB = await this.getUserRoleService.execute({
         where: {
           name: body.name,
-          schoolID,
+          schoolID: body.schoolID,
         },
       });
       if (userRoleDB) {
@@ -32,21 +31,21 @@ export class CreateUserRoleController {
           message: 'Esta institución ya tiene un rol de usuario con ese nombre',
         });
       }
-      userRoleDB = await this.createUserRoleService.execute({
+      createdUserRole = await this.createUserRoleService.execute({
         data: {
           name: body.name,
 
           actions: body.actions,
-          schoolID,
+          schoolID: body.schoolID,
           order: body.order,
         },
       });
-      return userRoleDB;
+      return createdUserRole;
     } catch (error) {
-      if (userRoleDB) {
+      if (createdUserRole) {
         await this.deleteUserRoleService.execute({
           where: {
-            id: userRoleDB.id,
+            id: createdUserRole.id,
           },
         });
       }

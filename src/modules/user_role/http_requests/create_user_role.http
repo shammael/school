@@ -3,9 +3,11 @@ POST http://localhost:80/school/user-role/
 Content-Type: application/json
 
 {
-  "name": "Estudiante",
-  "roleBindings": {
-    "ENROLL_SUBJECT": true
+  "name": "Administrator",
+  "actions": {
+    "CREATE_SCHOOL": true,
+    "CREATE_USER_ROLE" : true
   },
   "order": 1
+  # "schoolID": "9d915379-dc68-4c06-bac6-c5c6e1d3283c"
 }

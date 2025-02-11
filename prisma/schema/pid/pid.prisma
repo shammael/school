@@ -1,10 +1,11 @@
 model Pid {
-  id         String   @id @default(uuid())
-  number     String   @unique
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-  user_id    String   @unique
-  user       User     @relation(fields: [user_id], references: [id])
-  image_id   String?
-  image      Media?   @relation(fields: [image_id], references: [id])
+  id           String       @id @default(uuid())
+  number       String       @unique
+  created_at   DateTime     @default(now())
+  updated_at   DateTime     @updatedAt
+  user_id      String       @unique
+  user         User         @relation(fields: [user_id], references: [id])
+  image_id     String?
+  image        Media?       @relation(fields: [image_id], references: [id])
+  gossip_users GossipUser[]
 }

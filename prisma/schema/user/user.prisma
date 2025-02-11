@@ -8,4 +8,5 @@ model User {
   role_bindings UserRoleBinding[]
   evaluations   UserEvaluation[]
   status        UserStatus
+  gossip_users  GossipUser[]
 }

@@ -18,7 +18,7 @@ export const prismaPidEntityAdapter = (
       updatedAt: document.updated_at,
       userID: uuidAdapter(document.user_id),
       user: document.user ? prismaUserEntityAdapter(document.user) : undefined,
-      imageID: uuidAdapter(document.image_id),
+      imageID: document.image_id ? uuidAdapter(document.image_id) : undefined,
       image: document.image
         ? prismaMediaEntityAdapter(document.image)
         : undefined,

@@ -21,6 +21,8 @@ export class CreateSchoolService {
             },
           },
           status: 'ACTIVE',
+          code: data.code,
+          short: data.short,
         },
         include,
       }),

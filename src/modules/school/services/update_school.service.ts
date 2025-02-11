@@ -13,6 +13,8 @@ export class UpdateSchoolService {
         data: {
           name: data.name,
           type: data.type,
+          code: data.code,
+          short: data.short,
         },
         where,
         include,

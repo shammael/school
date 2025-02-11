@@ -42,9 +42,16 @@ export type DateOptions = {
   lt?: Date;
 };
 
-export type IDOptions = {
+export type UUIDOptions = {
   equals?: string;
   in?: string[];
   not?: string;
   notIn?: string[];
+};
+
+export type BooleanOptions = {
+  equals?: boolean;
+  in?: boolean[];
+  not?: boolean;
+  notIn?: boolean[];
 };

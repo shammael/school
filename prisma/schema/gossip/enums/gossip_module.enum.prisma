@@ -1,0 +1,8 @@
+enum GossipModule {
+  USER
+  CLASSROOM
+  SUBJECT
+  PROGRAM
+  EVALUATION
+  AUTH
+}

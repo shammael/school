@@ -18,6 +18,8 @@ export const prismaSchoolEntityAdapter = (
       location: document.location
         ? prismaLocationEntityAdapter(document.location)
         : undefined,
+      short: document.short,
+      code: document.code,
     };
   }
 };

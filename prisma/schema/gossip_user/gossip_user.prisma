@@ -1,0 +1,13 @@
+model GossipUser {
+  id         String @id @default(uuid())
+  user_id    String
+  user       User   @relation(fields: [user_id], references: [id])
+  firstname  String
+  lastname   String
+  email      String
+  pid_id     String
+  pid        Pid    @relation(fields: [pid_id], references: [id])
+  pid_number String
+  gossip_id  String @unique
+  gossip     Gossip @relation(fields: [gossip_id], references: [id])
+}

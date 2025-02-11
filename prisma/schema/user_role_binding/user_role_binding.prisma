@@ -1,11 +1,11 @@
 model UserRoleBinding {
-  id         String   @id @default(cuid())
+  id         String                  @id @default(uuid())
   user_id    String
-  user       User     @relation(fields: [user_id], references: [id])
+  user       User                    @relation(fields: [user_id], references: [id])
   role_id    String
-  role       UserRole @relation(fields: [role_id], references: [id])
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-  password   String
+  role       UserRole                @relation(fields: [role_id], references: [id])
+  created_at DateTime                @default(now())
+  updated_at DateTime                @updatedAt
   profile    Profile?
+  gossips    GossipUserRoleBinding[]
 }

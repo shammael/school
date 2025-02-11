@@ -14,7 +14,9 @@ export const prismaUserRoleEntityAdapter = (
       id: uuidAdapter(document.id),
       name: document.name,
       actions: document.actions as RoleBindingAction,
-      schoolID: uuidAdapter(document.school_id),
+      schoolID: document.school_id
+        ? uuidAdapter(document.school_id)
+        : undefined,
       school: document.school
         ? prismaSchoolEntityAdapter(document.school)
         : undefined,
